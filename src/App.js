@@ -31,8 +31,9 @@ export default function App() {
         setResultX(inputX);
         setResultY(inputY);
 
-    } else {
-      setError(data.message); // 에러 메세지 추가
+      } else {
+        setError(data.message); // 에러 메세지 추가
+      }
     } catch (err) {
       setError('Server error occurred.');
     }
