@@ -16,11 +16,11 @@ export default function App() {
   const calculate = async () => {
 
     setError(null);
-    setFib(null);
-    setFact(null);
+    setSum(null);
+    setProd(null);
 
     try {
-      const response = await fetch(`${BACKEND_BASE_URL}/sumprod?x=${inputX}&y=${inputY}`); // 1개로 통합
+      const response = await fetch(`${BACKEND_BASE_URL}/sumprod?x=${InputX}&y=${InputY}`); // 1개로 통합
 
       const data = await response.json();
 
@@ -28,8 +28,8 @@ export default function App() {
         setSum(data.sum);
         setProd(data.prod);
 
-        setResultX(inputX);
-        setResultY(inputY);
+        setResultX(InputX);
+        setResultY(InputY);
 
       } else {
         setError(data.message); // 에러 메세지 추가
